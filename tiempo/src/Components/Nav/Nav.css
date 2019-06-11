@@ -3,7 +3,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     display: flex;
-    background: #454545;
+    background: #d1d1d1;
 }
 
 .pageLogo {
@@ -12,14 +12,14 @@ nav {
 }
 
 .pageLogo h1 {
-    color: #eee;
+    color: #454545;
     font-size: 2.5em;
     font-family: 'Pacifico', cursive;
     font-style: italic;
 }
 
 .pageLogo p {
-    color: #eee;
+    color: #454545;
     position: absolute;
     right: 0;
     margin-top: -15px;
@@ -29,7 +29,7 @@ nav {
 
 
 .buscarCiudad {
-    background: #eee;
+    background: #454545;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -40,7 +40,8 @@ nav {
 
 .buscarCiudad input {
     height: 100%;
-    background: #eee;
+    background: #d1d1d1;
+    border-radius: 5px;
     border: none;
     max-width: 175px;
     font-size: 1.15em;

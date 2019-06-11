@@ -4,7 +4,7 @@ header {
     display: flex;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    background: #454545;
+    background: #d1d1d1;
 }
 
 .divMax {
@@ -25,14 +25,15 @@ header ul li {
     border-top-right-radius: 25px;
 }
 
-header ul li:hover {
-    background: #bdbdbd;
+header ul li:hover, header ul li:hover a {
+    background: #454545;
+    color: #eee;
     cursor: pointer;
 }
 
 header ul li a {
     text-decoration: none;
-    color: #eee;
+    color: #454545;
 }
 
 .divMin {
