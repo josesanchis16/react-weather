@@ -1,10 +1,10 @@
 import React from 'react';
 import CurrentWeather from './currentWeather/currentWeather';
 
-const Content = () => {
+const Content = (props) => {
     return (
         <div className="content">
-            <CurrentWeather />
+            <CurrentWeather geo={props.geo}/>
         </div>
     )
 }
