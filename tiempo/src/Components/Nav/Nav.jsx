@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Nav.css';
 
 const Nav = () => {
@@ -10,7 +10,7 @@ const Nav = () => {
             </div>
             <div className="buscarCiudad">
                 <input type="text" />
-                <i class="fas fa-search-location fa-2x"></i>
+                <i className="fas fa-search-location fa-2x"></i>
             </div>
         </nav>
     )

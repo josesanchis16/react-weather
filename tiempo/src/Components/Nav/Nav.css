@@ -59,3 +59,13 @@ nav {
 .buscarCiudad i:hover {
     cursor: pointer;
 }
+
+@media (max-width: 700px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .buscarCiudad {
+        margin-top:20px;
+    }
+}
