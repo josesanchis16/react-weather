@@ -5,12 +5,29 @@
   padding: 0;
 }
 
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
 body {
   background-image: url('https://picsum.photos/id/870/1280/768?grayscale&random=1');
   background-size: cover;
   background-attachment: fixed;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
+#root {
+  height: 100%;
+}
+
+.App {
+  height: 100%;
+}
 
 @media (max-width: 700px) {
   body {

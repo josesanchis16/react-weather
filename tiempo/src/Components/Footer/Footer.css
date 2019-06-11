@@ -1,0 +1,30 @@
+footer {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    background: #d1d1d1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.pageLogoFooter {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.pageLogoFooter h1 {
+    color: #454545;
+    font-size: 2em;
+    font-family: 'Pacifico', cursive;
+    font-style: italic;
+}
+
+.pageLogoFooter p {
+    color: #454545;
+    position: absolute;
+    right: 0;
+    font-size: 0.8em;
+    margin-top: -15px;
+    font-family: 'Pacifico', cursive;
+}

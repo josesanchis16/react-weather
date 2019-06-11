@@ -1,4 +1,4 @@
-nav {
+.nav {
     padding: 10px;
     justify-content: space-between;
     align-items: center;
@@ -62,7 +62,7 @@ nav {
 }
 
 @media (max-width: 700px) {
-    nav {
+    .nav {
         flex-direction: column;
     }
 
