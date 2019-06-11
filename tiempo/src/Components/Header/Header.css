@@ -1,0 +1,36 @@
+header {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: #454545;
+}
+
+header ul {
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    list-style: none;
+}
+
+header ul li {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100px;
+    padding: 20px 50px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+header ul li:hover {
+    background: #bdbdbd;
+    cursor: pointer;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #eee;
+}
