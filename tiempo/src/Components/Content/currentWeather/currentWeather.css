@@ -1,7 +1,8 @@
 .divCurrentWeather {
-    background: #d1d1d1;
+    background: #d1d1d1d1;
     border-radius: 25px;
     margin: 15px;
+    margin-top: 25px;
     padding: 10px;
     position: relative;
     justify-content: center;
@@ -62,6 +63,13 @@
     width: 10em;
     display: flex;
     flex-direction: column;
+    transition: 0.5s;
+}
+
+.tiempoActualImg .img:hover img {
+    padding: 0 25px;
+    width: 11.3em;
+    transition: 0.5s;
 }
 
 .tiempoActualImg .texto {
@@ -95,14 +103,28 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .tiempoActualEstadisticas .temperatura h3 {
     font-size: 1.6em;
 }
 
+.fahrenheits {
+    display: none;
+}
+
 .tiempoActualEstadisticas .temperatura p {
     font-size: 1.2em;
+    transition: 0.5s;
+}
+
+.changeTemp:hover .celsius {
+    display: none;
+}
+
+.changeTemp:hover .fahrenheits {
+    display: block;
 }
 
 .tiempoActualEstadisticas .tempMaxNMin {
@@ -115,7 +137,7 @@
 }
 
 .secondaryInfo {
-     margin: 10px auto;
+    margin: 10px auto;
 }
 
 .secondaryInfo>div {

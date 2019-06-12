@@ -13,7 +13,7 @@ class CurrentWeather extends Component {
     }))
 
     render() {
-        console.log(this.state);
+        console.log(typeof this.state.main.temp_max);
         return (
             <div className="divCurrentWeather">
                 <div className="nombreCiudad">
@@ -31,29 +31,32 @@ class CurrentWeather extends Component {
                         </div>
                     </div>
                     <div className="tiempoActualEstadisticas card">
-                        <div className="temperatura">
+                        <div className="temperatura changeTemp">
                             <h3>Temperature</h3>
-                            <p>{this.state.main.temp}°</p>
+                            <p className="celsius">{Math.round(this.state.main.temp)}°</p>
+                            <p className="fahrenheits">{Math.round(((9 * this.state.main.temp) + (32 * 5)) / 5)}°</p>
                         </div>
 
                         <div className="tempMaxNMin secondaryInfo">
-                            <div className="tempMin tempChild">
+                            <div className="tempMin tempChild changeTemp">
                                 <h3>Min. Temperature</h3>
-                                <p>{this.state.main.temp_min}</p>
+                                <p className="celsius">{Math.round(this.state.main.temp_min)}°</p>
+                            <p className="fahrenheits">{Math.round(((9 * this.state.main.temp_min) + (32 * 5)) / 5)}°</p>
                             </div>
-                            <div className="tempMax tempChild">
+                            <div className="tempMax tempChild changeTemp">
                                 <h3>Max. Temperature</h3>
-                                <p>{this.state.main.temp_max}</p>
+                                <p className="celsius">{Math.round(this.state.main.temp_max)}°</p>
+                            <p className="fahrenheits">{Math.round(((9 * this.state.main.temp_max) + (32 * 5)) / 5)}°</p>
                             </div>
                         </div>
                         <div className="otherInfo secondaryInfo">
                             <div className="humidity tempChild">
                                 <h3>Humidity</h3>
-                                <p>{this.state.main.humidity}</p>
+                                <p>{this.state.main.humidity}%</p>
                             </div>
                             <div className="pressure tempChild">
                                 <h3>Pressure</h3>
-                                <p>{this.state.main.pressure}</p>
+                                <p>{this.state.main.pressure}hPa</p>
                             </div>
                         </div>
                     </div>
