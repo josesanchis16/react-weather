@@ -1,6 +1,4 @@
-import React, {
-  Component
-} from 'react';
+import React, { Component } from 'react';
 import './style.css';
 import Header from './Components/Header/Header';
 import Content from './Components/Content/Content';
@@ -10,11 +8,11 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      geo: {
-        log: '',
-        lat: '',
-      }
     }
+
+  }
+
+  componentDidMount() {
     this.geo();
   }
 
@@ -22,12 +20,16 @@ class App extends Component {
     if ("geolocation" in navigator) { //check geolocation available 
       //try to get user current location using getCurrentPosition() method
       navigator.geolocation.getCurrentPosition((position) => {
-        this.setState({
-          geo: {
-            lat: position.coords.latitude,
-            log: position.coords.longitude,
-          }
-        });
+        console.log(`https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=5f753cb785e9103f97ca387e05b78c6e&units=metric`);
+        fetch(`https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=5f753cb785e9103f97ca387e05b78c6e&units=metric`)
+          .then(res => res.json())
+          .then(res => {
+            this.setState({
+              weather: res
+            })
+          })
+          .then(console.log(this.state.weather))
+          .catch(console.log);
       });
     } else {
       console.log("Browser doesn't support geolocation!");
@@ -38,7 +40,7 @@ class App extends Component {
     return (
       <div className="App" >
         <Header />
-        <Content geo={this.state.geo}/>
+        <Content weather={this.state.weather} /> 
         <Footer />
       </div>
     );
