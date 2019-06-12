@@ -1,0 +1,132 @@
+.divCurrentWeather {
+    background: #d1d1d1;
+    border-radius: 25px;
+    margin: 15px;
+    padding: 10px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.nombreCiudad {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 10px;
+}
+
+.nombreCiudad::after {
+    content: "";
+    width: 90%;
+    height: 5px;
+    background: #454545;
+    position: absolute;
+    top: 55px;
+    border-radius: 10px;
+}
+
+.nombreCiudad h1 {
+    display: inline;
+    color: #454545;
+}
+
+.nombreCiudad p {
+    margin-top: 12px;
+    margin-left: 5px;
+    font-size: 0.75em;
+}
+
+.temperaturas {
+    width: 90%;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+}
+
+.card {
+    width: 350px;
+    color: #454545;
+}
+
+.tiempoActualImg {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.tiempoActualImg .img img {
+    padding: 10px 50px;
+    width: 10em;
+    display: flex;
+    flex-direction: column;
+}
+
+.tiempoActualImg .texto {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.tiempoActualImg .texto p:nth-child(1) {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.tiempoActualImg .texto p:nth-child(2) {
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.tiempoActualEstadisticas {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+.tiempoActualEstadisticas .temperatura {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.tiempoActualEstadisticas .temperatura h3 {
+    font-size: 1.6em;
+}
+
+.tiempoActualEstadisticas .temperatura p {
+    font-size: 1.2em;
+}
+
+.tiempoActualEstadisticas .tempMaxNMin {
+    margin-top: 30px;
+}
+
+.tiempoActualEstadisticas .tempMaxNMin,
+.tiempoActualEstadisticas .otherInfo {
+    display: flex;
+}
+
+.secondaryInfo {
+     margin: 10px auto;
+}
+
+.secondaryInfo>div {
+    margin: 10px;
+    width: 150px;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.secondaryInfo>.tempChild>h3,
+.secondaryInfo>.tempChild>p {
+    text-align: center;
+}

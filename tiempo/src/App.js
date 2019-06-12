@@ -1,4 +1,6 @@
-import React, { Component } from 'react';
+import React, {
+  Component
+} from 'react';
 import './style.css';
 import Header from './Components/Header/Header';
 import Content from './Components/Content/Content';
@@ -8,6 +10,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      isLoading: true,
     }
 
   }
@@ -26,7 +29,9 @@ class App extends Component {
           .then(res => {
             this.setState({
               weather: res
-            })
+            }, () => (this.setState({
+              isLoading: false,
+            })))
           })
           .then(console.log(this.state.weather))
           .catch(console.log);
@@ -40,7 +45,7 @@ class App extends Component {
     return (
       <div className="App" >
         <Header />
-        <Content weather={this.state.weather} /> 
+        {!this.state.isLoading && <Content weather={this.state.weather} />}
         <Footer />
       </div>
     );
