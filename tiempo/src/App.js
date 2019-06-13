@@ -5,6 +5,7 @@ import './style.css';
 import Header from './Components/Header/Header';
 import Content from './Components/Content/Content';
 import Footer from './Components/Footer/Footer';
+const Api = require('./data/weatherApi').default;
 
 class App extends Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class App extends Component {
     this.state = {
       isLoading: true,
     }
-
+    console.log(Api);
   }
 
   componentDidMount() {
@@ -23,8 +24,8 @@ class App extends Component {
     if ("geolocation" in navigator) { //check geolocation available 
       //try to get user current location using getCurrentPosition() method
       navigator.geolocation.getCurrentPosition((position) => {
-        console.log(`https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=5f753cb785e9103f97ca387e05b78c6e&units=metric`);
-        fetch(`https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=5f753cb785e9103f97ca387e05b78c6e&units=metric`)
+        const api = Api;
+        fetch(`https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${api}&units=metric`)
           .then(res => res.json())
           .then(res => {
             this.setState({
@@ -42,14 +43,19 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <div className="App" >
-        <Header />
-        {!this.state.isLoading && <Content weather={this.state.weather} />}
-        <Footer />
-      </div>
-    );
+    return ( <
+      div className = "App" >
+      <
+      Header / > {
+        !this.state.isLoading && < Content weather = {
+          this.state.weather
+        }
+        />} <
+        Footer / >
+        <
+        /div>
+      );
+    }
   }
-}
 
-export default App;
+  export default App;

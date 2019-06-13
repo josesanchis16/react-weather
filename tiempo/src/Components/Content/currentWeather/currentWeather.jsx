@@ -8,9 +8,6 @@ class CurrentWeather extends Component {
         console.log(props);
         this.state = this.props.weather;
     }
-    renderWeathers = (weathers) => (weathers.map(weather => {
-
-    }))
 
     render() {
         console.log(typeof this.state.main.temp_max);
@@ -41,12 +38,12 @@ class CurrentWeather extends Component {
                             <div className="tempMin tempChild changeTemp">
                                 <h3>Min. Temperature</h3>
                                 <p className="celsius">{Math.round(this.state.main.temp_min)}°</p>
-                            <p className="fahrenheits">{Math.round(((9 * this.state.main.temp_min) + (32 * 5)) / 5)}°</p>
+                                <p className="fahrenheits">{Math.round(((9 * this.state.main.temp_min) + (32 * 5)) / 5)}°</p>
                             </div>
                             <div className="tempMax tempChild changeTemp">
                                 <h3>Max. Temperature</h3>
                                 <p className="celsius">{Math.round(this.state.main.temp_max)}°</p>
-                            <p className="fahrenheits">{Math.round(((9 * this.state.main.temp_max) + (32 * 5)) / 5)}°</p>
+                                <p className="fahrenheits">{Math.round(((9 * this.state.main.temp_max) + (32 * 5)) / 5)}°</p>
                             </div>
                         </div>
                         <div className="otherInfo secondaryInfo">
